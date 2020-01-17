@@ -163,12 +163,11 @@ static unsigned int defaultattr = 11;
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
-static MouseShortcut mshortcuts[] = {
-	/* button               mask            string */
-	{ Button4,              XK_ANY_MOD,     "\031" },
-	{ Button5,              XK_ANY_MOD,     "\005" },
-};
 
+ static MouseShortcut mshortcuts[] = {
+ 	{ Button4,          XK_ANY_MOD,        "\031" },
+ 	{ Button5,          XK_ANY_MOD,        "\005" },
+ };
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask|ShiftMask)
@@ -187,6 +186,8 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
 	{ ShiftMask,            XK_Insert,      selpaste,       {.i =  0} },
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
+	{ ShiftMask,          		XK_Page_Up,     kscrollup,      {.i = -1} },
+	{ ShiftMask,          		XK_Page_Down,   kscrolldown,    {.i = -1} },
 };
 
 /*
